@@ -35,11 +35,16 @@ while True: #controle de execução
         conn.execute("insert into cadastro values(?,?,?,?,?,?,?)", (vcpf,vnome,vgenero,vsexo,vorientacao,vusuario,vsenha))
         conn.commit()
         print("cadastro feito com sucesso!")
+
+    vconfirma = input("deseja adicionar mais dados:(S ou N) ")
+    if vconfirma.upper() == "N":
+        break
+
       
 
 ## tem que fazer o crud:  update, delete, select
 ## fechar conexão 
-conn.close
+conn.close()
 quit()
 
 
